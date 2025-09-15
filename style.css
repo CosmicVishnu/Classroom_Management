@@ -1,0 +1,126 @@
+:root {
+    --header-bg: #2D3748;      /* A slightly darker, more contrasted header */
+    --header-text: #FFFFFF;
+    /* Here is the new background color */
+    --background-color: #EAEBF0; /* A soft, elegant off-white/light grey */
+    --container-bg: #FFFFFF;
+    --text-primary: #1A202C;
+    --text-secondary: #718096;
+    --border-color: #E2E8F0;
+    --danger-color: #E53E3E;
+    --danger-hover-bg: #FFF5F5;
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* A softer, more pronounced shadow */
+}
+
+/* --- 2. General Body and Typography Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Here's the new background implementation */
+    background-color: var(--background-color);
+    /* This adds a subtle dot pattern for texture. It's a modern design touch. */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23d0d6e4'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+    color: var(--text-primary);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: var(--container-bg);
+    padding: 40px;
+    border-radius: 16px; /* Slightly more rounded corners */
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color); /* A subtle border for definition */
+}
+
+h1, p { text-align: center; }
+h1 { font-weight: 600; }
+p { color: var(--text-secondary); margin-bottom: 40px; }
+
+/* --- 3. Modern Table Styling --- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+/* Color for the column headings */
+thead th {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    padding: 15px 20px;
+    text-align: left;
+}
+thead th:first-child { border-radius: 8px 0 0 8px; }
+thead th:last-child { border-radius: 0 8px 8px 0; }
+
+tbody tr {
+    background-color: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+tbody tr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+td {
+    padding: 18px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+}
+td:first-child { border-left: 1px solid var(--border-color); border-radius: 8px 0 0 8px; }
+td:last-child { border-right: 1px solid var(--border-color); border-radius: 0 8px 8px 0; text-align: center; }
+
+/* --- 4. Inline Editing & Action Buttons --- */
+.cell-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.inline-btn, .action-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+/* Edit Button */
+.inline-edit-btn { color: var(--text-secondary); }
+.inline-edit-btn:hover { background-color: #E2E8F0; color: var(--text-primary); }
+
+/* Save & Cancel Buttons */
+.inline-save-btn { color: #38A169; }
+.inline-save-btn:hover { background-color: #F0FFF4; }
+.inline-cancel-btn { color: #E53E3E; }
+.inline-cancel-btn:hover { background-color: #FFF5F5; }
+
+/* Delete Button */
+.delete-row-btn { color: var(--danger-color); }
+.delete-row-btn:hover { background-color: var(--danger-hover-bg); }
+
+/* Input field styling */
+td input.edit-input, td select.edit-input {
+    width: 100%; padding: 8px; border: 1px solid var(--border-color);
+    border-radius: 6px; font-family: 'Poppins', sans-serif; font-size: 1rem;
+}
+td input.edit-input:focus { outline: 2px solid #4299E1; border-color: transparent; }
