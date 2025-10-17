@@ -1,11 +1,13 @@
-# Academic Portal
+# Classroom_Management
+=======
+# Classroom Management System
 
 A comprehensive academic management system with React frontend and Spring Boot backend, featuring user management, attendance tracking, timetable management, notices, study materials, and events.
 
 ## 🏗️ Project Structure
 
 ```
-Academic Portal/
+Classroom Management/
 ├── backend/                    # Spring Boot Backend (Maven)
 │   ├── src/main/java/         # Java source code
 │   ├── src/main/resources/    # Configuration files
@@ -30,13 +32,6 @@ Academic Portal/
 - **MySQL 8.0** or higher
 
 ### Manual Setup
-
-#### Prerequisites
-
-- **Java 17** or higher
-- **Maven 3.6** or higher
-- **Node.js 18** or higher
-- **MySQL 8.0** or higher
 
 #### Backend Setup
 
@@ -69,12 +64,6 @@ npm run dev
    Then run:
    ```sql
    CREATE DATABASE academic_portal;
-   ```
-
-3. **Run setup script:**
-   ```bash
-   cd backend
-   setup-mysql.bat
    ```
 
 ### Backend Configuration
@@ -273,3 +262,6 @@ For issues and questions:
 - Database initialization is automatic on first run
 - All default users and data are seeded automatically
 - CORS is configured for local development
+=======
+# Classroom_Management
+>>>>>>> 724c5ff659343decf44e3ed4abc1bfdc03f2615a
