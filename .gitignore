@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+backend/target/
+azure-basic-app/target/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# Database files
+*.db
+*.sqlite
+
+# Build artifacts
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Maven wrapper (keep mvnw.cmd if needed)
+backend/mvnw
+azure-basic-app/mvnw
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+nbproject/
+
+# VS Code
+.history/
+
+# Windows executables
+*.exe
+*.bat
